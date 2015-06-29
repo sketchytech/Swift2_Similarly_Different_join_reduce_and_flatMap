@@ -1,7 +1,7 @@
 //: # Similarly different: join(), reduce() and flatMap() in Swift 2
 
 let nestedArray = [[1,2,3,4],[6,7,8,9]]
-//: reduce(), flatMap() and join() can produce the same resultes 
+//: reduce(), flatMap() and join() can produce the same results 
 let joined = [].join(nestedArray)
 let flattened = nestedArray.flatMap{$0}
 let reduced = nestedArray.reduce([], combine: {$0 + $1})
