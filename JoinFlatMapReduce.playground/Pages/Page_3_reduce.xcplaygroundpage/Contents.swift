@@ -8,12 +8,12 @@
 //:  Or if we wanted to add a character between the Strings:
 ["one","two","three"].reduce("",combine:{$1 + "-" + $0}) // "three-two-one-"
 //: But perhaps we want something that isn't always the same, perhaps we want to emulate join()
-
 let strArr = ["one","two","three"]
 
 strArr.enumerate().reduce("",combine:{$0 + $1.element + ($1.index < strArr.endIndex-1 ? "-" : "") }) // "three-two-one"
 //: Or we might choose to become more sophisticated than join()
 strArr.enumerate().reduce("",combine:{$0 + $1.element + ($1.index < strArr.endIndex-1 ? ", " : ".") }) // "one, two, three."
 //: The point is that reduce() while appearing at first similar to join() actually has some more fine-grained abilities if we're willing to accept its greater complexity.
+
 
 //: [Next](@next)
